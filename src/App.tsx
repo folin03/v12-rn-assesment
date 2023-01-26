@@ -7,20 +7,18 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
-import {SafeAreaView, ScrollView, StatusBar, StyleSheet} from 'react-native';
+import {SafeAreaView, ScrollView, StatusBar, Text} from 'react-native';
 
-const App: () => Node = () => {
+const App = () => {
   return (
     <SafeAreaView>
       <StatusBar />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         {/*  */}
+        <Text> This is running</Text>
       </ScrollView>
     </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default App;
