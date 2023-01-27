@@ -3,6 +3,7 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
   centre: {
     alignItems: 'center',
+    marginHorizontal: 20,
   },
 
   normalText: {
@@ -12,13 +13,16 @@ export const styles = StyleSheet.create({
     marginTop: 20,
   },
 
-  retailerViewContainer: {
-    width: '90%',
-    height: 300,
-  },
-
   retailerPicture: {
     backgroundColor: 'lightblue',
     height: 200,
+  },
+
+  flatListContainer: {
+    width: '100%',
+  },
+
+  listFooter: {
+    height: 150,
   },
 });

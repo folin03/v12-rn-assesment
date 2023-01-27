@@ -1,12 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import {Retailer} from '../types';
 
 export const RetailerPreViewComponent = (props: Retailer) => {
   return (
     <View style={styles.retailerViewContainer}>
       <View style={styles.retailerPicture}>
-        <Text>{props.image}</Text>
+        <Image source={{uri: props.image}} style={styles.image} />
       </View>
       <Text style={styles.normalText}>{props.name}</Text>
       <Text style={styles.normalText}>{props.location}</Text>
@@ -19,16 +19,22 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20,
     color: 'black',
-    marginTop: 20,
+    marginVertical: 5,
   },
 
   retailerViewContainer: {
-    width: '90%',
     height: 300,
+    marginVertical: 20,
   },
 
   retailerPicture: {
     backgroundColor: 'lightblue',
-    height: 200,
+    height: 215,
+    width: '100%',
+  },
+
+  image: {
+    height: '100%',
+    resizeMode: 'contain',
   },
 });

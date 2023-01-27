@@ -8,22 +8,20 @@
 
 import React from 'react';
 import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
-import { RetailerDetailScreen } from './screens/RetailerDetailScreen';
+import {RetailerDetailScreen} from './screens/RetailerDetailScreen';
 import {RetailersListScreen} from './screens/RetailersListScreen';
 
 const App = () => {
   return (
     <SafeAreaView>
       <StatusBar />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <RetailersListScreen />
-        {/* <RetailerDetailScreen
+      <RetailersListScreen />
+      {/* <RetailerDetailScreen
           id={0}
           name={'name'}
           location={'location'}
           image={'imageUrl'}
         /> */}
-      </ScrollView>
     </SafeAreaView>
   );
 };
