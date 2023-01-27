@@ -4,7 +4,6 @@ import axios, {AxiosError, AxiosResponse} from 'axios';
 import {HeaderComponent} from '../components/HeaderComponent';
 import {RetailerPreViewComponent} from '../components/RetailerPreViewComponent';
 import {styles} from '../styles';
-import {Retailer} from '../types';
 import {CONSTANTS} from '../../constants';
 
 export const RetailersListScreen = () => {
@@ -40,7 +39,7 @@ export const RetailersListScreen = () => {
   return (
     <View style={styles.centre}>
       <HeaderComponent title="Our Retailers" />
-      <View style={styles.flatListContainer}>
+      <View style={styles.bodyContainer}>
         <FlatList
           data={retailersList}
           renderItem={({item}) => (

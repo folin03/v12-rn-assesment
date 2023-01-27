@@ -4,3 +4,12 @@ export interface Retailer {
   image: string;
   location: string;
 }
+
+export interface RetPreViewProps extends Retailer {
+  onPressDisabled?: boolean;
+}
+
+export interface RetailerAction {
+  type: string;
+  payload: Retailer;
+}

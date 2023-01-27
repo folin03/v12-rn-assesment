@@ -7,21 +7,28 @@
  */
 
 import React from 'react';
-import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
+import {useAppSelector} from '../redux/hooks';
+import {RootState} from '../redux/store';
 import {RetailerDetailScreen} from './screens/RetailerDetailScreen';
 import {RetailersListScreen} from './screens/RetailersListScreen';
 
 const App = () => {
+  const retailerDetails = useAppSelector((state: RootState) => state.retailer);
+
   return (
     <SafeAreaView>
       <StatusBar />
-      <RetailersListScreen />
-      {/* <RetailerDetailScreen
-          id={0}
-          name={'name'}
-          location={'location'}
-          image={'imageUrl'}
-        /> */}
+      {retailerDetails.id === 0 ? (
+        <RetailersListScreen />
+      ) : (
+        <RetailerDetailScreen
+          id={retailerDetails.id}
+          name={retailerDetails.name}
+          location={retailerDetails.location}
+          image={retailerDetails.image}
+        />
+      )}
     </SafeAreaView>
   );
 };

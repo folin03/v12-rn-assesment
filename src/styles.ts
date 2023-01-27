@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
     height: 200,
   },
 
-  flatListContainer: {
+  bodyContainer: {
     width: '100%',
   },
 

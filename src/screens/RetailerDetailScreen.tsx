@@ -9,13 +9,16 @@ export const RetailerDetailScreen = (props: Retailer) => {
   return (
     <View style={styles.centre}>
       <HeaderComponent title="Retailer Detail" />
-      <RetailerPreViewComponent
-        id={props.id}
-        name={props.name}
-        location={props.location}
-        image={props.image}
-      />
-      <Text>Some detail text about retailer</Text>
+      <View style={styles.bodyContainer}>
+        <RetailerPreViewComponent
+          id={props.id}
+          name={props.name}
+          location={props.location}
+          image={props.image}
+          onPressDisabled={true}
+        />
+        <Text>Some detail text about retailer</Text>
+      </View>
     </View>
   );
 };
