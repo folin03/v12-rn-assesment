@@ -14,17 +14,21 @@ const retailerSlice = createSlice({
   initialState,
   reducers: {
     setRetailer: (state: Retailer, action: RetailerAction) => {
-      // console.log('state', state);
-      // console.log('action', action);
       state.id = action.payload.id;
       state.name = action.payload.name;
       state.location = action.payload.location;
       state.image = action.payload.image;
     },
+    setDefaultRetailer: (state: Retailer) => {
+      state.id = initialState.id;
+      state.name = initialState.name;
+      state.location = initialState.location;
+      state.image = initialState.image;
+    },
   },
 });
 
-export const {setRetailer} = retailerSlice.actions;
+export const {setRetailer, setDefaultRetailer} = retailerSlice.actions;
 
 export const selectRetailer = (state: RootState) => state.retailer;
 

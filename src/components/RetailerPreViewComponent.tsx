@@ -1,9 +1,15 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {COLOURS} from '../../constants';
 import {useAppDispatch} from '../../redux/hooks';
 import {setRetailer} from '../../redux/slices/retailerSlice';
 import {RetPreViewProps} from '../types';
 
+/**
+ * Retailer Pre-view component
+ * @param props RetPreViewProps
+ * @returns function component
+ */
 export const RetailerPreViewComponent = (props: RetPreViewProps) => {
   const dispatch = useAppDispatch();
 
@@ -35,7 +41,7 @@ const styles = StyleSheet.create({
   normalText: {
     fontWeight: 'bold',
     fontSize: 20,
-    color: 'black',
+    color: COLOURS.BLACK,
     marginVertical: 5,
   },
 
@@ -45,7 +51,6 @@ const styles = StyleSheet.create({
   },
 
   retailerPicture: {
-    backgroundColor: 'lightblue',
     height: 215,
     width: '100%',
   },
